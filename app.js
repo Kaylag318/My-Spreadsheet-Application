@@ -101,14 +101,18 @@ let mouseButtonPressed = (event, index) => {
  * @todo THEN USING THESE FUNCTIONS, REPLACE THE 0 IN EACH FUNCTION DEFINITION BELOW WITH THE APPROPRIATE OUTPUT
  * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
  */
-
+let convertToLarger=(n,p)=>Math.trunc(n/p);
+ let msToTotalSeconds=ms=>ms/1000;
+ let msToTotalMinutes=(ms)=>convertToLarger(msToTotalSeconds(ms),60);
+ let msToTotalHours=(ms)=>convertToLarger(convertToLarger(msToTotalSeconds(ms),60),60);
+ let remainingAfterConvert=(n,p)=>n-(convertToLarger(n,p)*p);
 /**
  * Given a number of milliseconds from midnight, returns the second (0 to 60) for the displayed time
  * @param {number} num the number of milliseconds to convert to seconds
  * @return {number} second for the displayed time (0 to 60)
  */
 
-let getSecondFromMs   = num => 0;
+let getSecondFromMs   = num => ;
 
 let getMinuteFromMs   = num => 0;
 let getHourFromMs     = num => 0;
