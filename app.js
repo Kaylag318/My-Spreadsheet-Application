@@ -111,8 +111,12 @@ let convertToLarger=(n,p)=>Math.trunc(n/p);
  * @param {number} num the number of milliseconds to convert to seconds
  * @return {number} second for the displayed time (0 to 60)
  */
+let convertToSmaller=(n,p)=>n/(1/p);
+let daysToTotalHours=d=>convertToSmaller(d,24);
+let daysToTotalMinutes=d=>convertToSmaller(daysToTotalHours(d),60);
+let daysToTotalSeconds=d=>convertToSmaller(daysToTotalMinutes(d),60);
 
-let getSecondFromMs   = num => ;
+let getSecondFromMs   = num => 0;
 
 let getMinuteFromMs   = num => 0;
 let getHourFromMs     = num => 0;
