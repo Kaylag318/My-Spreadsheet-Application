@@ -116,14 +116,14 @@ let daysToTotalHours=d=>convertToSmaller(d,24);
 let daysToTotalMinutes=d=>convertToSmaller(daysToTotalHours(d),60);
 let daysToTotalSeconds=d=>convertToSmaller(daysToTotalMinutes(d),60);
 
-let getSecondFromMs   = num => 0;
+let getSecondFromMs   = num => num/1000;
 
-let getMinuteFromMs   = num => 0;
-let getHourFromMs     = num => 0;
+let getMinuteFromMs   = num => convertToLarger(msToTotalSeconds(num),60);
+let getHourFromMs     = num => convertToLarger(convertToLarger(msToTotalSeconds(num),60),60);
 
-let getSecondFromDays = num => 0;
-let getMinuteFromDays = num => 0;
-let getHourFromDays   = num => 0;
+let getSecondFromDays = num => convertToSmaller(daysToTotalMinutes(num),60);
+let getMinuteFromDays = num => convertToSmaller(daysToTotalHours(num),60);
+let getHourFromDays   = num => convertToSmaller(d,24);
 
 /* END REPLACEMENT FOR ASSIGNMENT 2 */
 
