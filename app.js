@@ -102,7 +102,7 @@ let mouseButtonPressed = (event, index) => {
  * @todo BE SURE TO DOCUMENT EACH FUNCTION IN JSDOC FORMAT (USE BELOW AS REFERENCE AND SEE: http://usejsdoc.org/)
  */
 let convertToLarger=(n,p)=>Math.trunc(n/p);
- let msToTotalSeconds=ms=>ms/1000;
+ let msToTotalSeconds=ms=>convertToLarger(ms,1000);
  let msToTotalMinutes=(ms)=>convertToLarger(msToTotalSeconds(ms),60);
  let msToTotalHours=(ms)=>convertToLarger(convertToLarger(msToTotalSeconds(ms),60),60);
  let remainingAfterConvert=(n,p)=>n-(convertToLarger(n,p)*p);
@@ -116,14 +116,14 @@ let daysToTotalHours=d=>convertToSmaller(d,24);
 let daysToTotalMinutes=d=>convertToSmaller(daysToTotalHours(d),60);
 let daysToTotalSeconds=d=>convertToSmaller(daysToTotalMinutes(d),60);
 
-let getSecondFromMs   = num => msToTotalSeconds(num);
+let getSecondFromMs   = num => (remainingAfterConvert(msToTotalSeconds(num)))/60;
 
-let getMinuteFromMs   = num => msToTotalMinutes(num);
-let getHourFromMs     = num => convertToLarger(convertToLarger(msToTotalSeconds(num),60),60);
+let getMinuteFromMs   = num => ;
+let getHourFromMs     = num => ;
 
-let getSecondFromDays = num => convertToSmaller(daysToTotalMinutes(num),60);
-let getMinuteFromDays = num => convertToSmaller(daysToTotalHours(num),60);
-let getHourFromDays   = num => convertToSmaller(d,24);
+let getSecondFromDays = num => ;
+let getMinuteFromDays = num => ;
+let getHourFromDays   = num => ;
 
 /* END REPLACEMENT FOR ASSIGNMENT 2 */
 
