@@ -116,7 +116,7 @@ let daysToTotalHours=d=>convertToSmaller(d,24);
 let daysToTotalMinutes=d=>convertToSmaller(daysToTotalHours(d),60);
 let daysToTotalSeconds=d=>convertToSmaller(daysToTotalMinutes(d),60);
 
-let getSecondFromMs   = num => (remainingAfterConvert(num,1000))/60;
+let getSecondFromMs   = num => remainingAfterConvert(msToTotalSeconds(num),60);
 
 let getMinuteFromMs   = num => ;
 let getHourFromMs     = num => ;
