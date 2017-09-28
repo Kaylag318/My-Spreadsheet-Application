@@ -109,7 +109,7 @@ let convertToLarger=(n,p)=>Math.trunc(n/p);
 /**
  * Given a number of milliseconds from midnight, returns the second (0 to 60) for the displayed time
  * @param {number} num the number of milliseconds to convert to seconds
- * @return {number} second for the displayed time (0 to 60)
+ * @return {number} second for the displayed time (0 to 60) 
  */
 let convertToSmaller=(n,p)=>n*p;
 let daysToTotalHours=d=>convertToSmaller(d,24);
