@@ -105,7 +105,7 @@ let convertToLarger=(n,p)=>Math.trunc(n/p);
  let msToTotalSeconds=ms=>convertToLarger(ms,1000);
  let msToTotalMinutes=(ms)=>convertToLarger(msToTotalSeconds(ms),60);
  let msToTotalHours=(ms)=>convertToLarger(convertToLarger(msToTotalSeconds(ms),60),60);
- let remainingAfterConvert=(n,p)=>n%p;
+ let remainingAfterConvert=(n,p)=>Math.trunc(n%p);
 /**
  * Given a number of milliseconds from midnight, returns the second (0 to 60) for the displayed time
  * @param {number} num the number of milliseconds to convert to seconds
@@ -121,9 +121,9 @@ let getSecondFromMs   = num => remainingAfterConvert(msToTotalSeconds(num),60);
 let getMinuteFromMs   = num => remainingAfterConvert(msToTotalMinutes(num),60);
 let getHourFromMs     = num => remainingAfterConvert(msToTotalHours(num),24);
 
-let getSecondFromDays = num => ;
-let getMinuteFromDays = num => ;
-let getHourFromDays   = num => ;
+let getSecondFromDays = num => remainingAfterConvert(daysToTotalSeconds(num),60);
+let getMinuteFromDays = num => remainingAfterConvert(daysToTotalMinutes(num),60);
+let getHourFromDays   = num => remainingAfterConvert(daysToTotalHours(num),24);
 
 /* END REPLACEMENT FOR ASSIGNMENT 2 */
 
