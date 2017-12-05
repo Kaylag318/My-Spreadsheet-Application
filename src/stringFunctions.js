@@ -1,3 +1,8 @@
+/** 
+Given a string as an input, len returns the number of characters in the string
+*@param {string} text string to get the length of
+*@return{number}number of characters 
+*/
 let len=text=>text.length
 let concatenate=(text1,text2)=>text1+text2;
 let left=(text,numChars)=>text.substring(0,numChars);
