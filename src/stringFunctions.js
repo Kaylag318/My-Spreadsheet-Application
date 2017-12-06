@@ -102,6 +102,11 @@ let getArgNum=(num,args)=>{
 	if (num===1) return getArgument(args);
 	else return getArgument(getArgNum(num-1,args));
 };
+/**
+Given a list of arguments,getFinalArg gets the final argument in the list
+*@param{}args the list of arguments 
+*@return the last argument in the list of arguments
+*/
 let getFinalArg=(args)=>getArgNum(args.length-1);
 /**
 Given a string and a number, removeLastChars removes the last number of characters of the string
