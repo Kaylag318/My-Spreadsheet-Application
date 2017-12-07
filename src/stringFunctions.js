@@ -83,8 +83,8 @@ let getFunctionName=text=>getBeforeText(text,"(")
 /**
 Given a postitive integer and a list of arguments separated by commas as inputs, removeArgs removes the first number of arguments from the list of arguments
 *@param{number}num number of arguments that needs to be removed
-*@param{}args list of arguments
-*@return{} list of arguments with the first num of arguments removed
+*@param{string}args list of arguments
+*@return{string} list of arguments with the first num of arguments removed
 */
 let removeArgs=(num,args)=>{
 	let removeFirstArg=list=>getAfterText(list,",");
@@ -94,7 +94,7 @@ let removeArgs=(num,args)=>{
 /**
 Given a positive integer and a list of arguments separated by commas,getArgNum returns the argument at the number position
 *@param{number}num the position of the argument you are trying to get
-*@param{}args the list of arguments separated by commas
+*@param{string}args the list of arguments separated by commas
 *@return the num argument in the list of arguments
 */
 let getArgNum=(num,args)=>{
@@ -104,7 +104,7 @@ let getArgNum=(num,args)=>{
 };
 /**
 Given a list of arguments,getFinalArg gets the final argument in the list
-*@param{}args the list of arguments 
+*@param{string}args the list of arguments 
 *@return the last argument in the list of arguments
 */
 let getFinalArg=(args)=>getArgNum(args.length-1);
