@@ -52,4 +52,6 @@ describe("String functions", function() {
  it ("gets an argument in a list",function(){
   expect(getArgNum(1,"foo,12345,bar,molloy,A2")).toBe("foo");
  });
+ it ("gets the final argument",function(){
+expect(getFinalArg("foo",12345,"bar","molloy","A2")).toBe("A2");
 });
